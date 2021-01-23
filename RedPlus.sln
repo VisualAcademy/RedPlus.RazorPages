@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedPlus", "RedPlus\RedPlus.csproj", "{81204FDF-00A2-430F-B1BC-1113BC428687}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81204FDF-00A2-430F-B1BC-1113BC428687}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81204FDF-00A2-430F-B1BC-1113BC428687}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81204FDF-00A2-430F-B1BC-1113BC428687}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81204FDF-00A2-430F-B1BC-1113BC428687}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD591D0E-648A-470F-A2AD-639A952D12BD}
+	EndGlobalSection
+EndGlobal
