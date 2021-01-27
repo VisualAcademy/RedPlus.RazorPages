@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,6 +22,9 @@ namespace RedPlus
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            // 미들웨어 추가 
+            app.UseStaticFiles(); // 정적인 HTML, CSS, JavaScript, ... 실행
 
             app.UseRouting();
 
