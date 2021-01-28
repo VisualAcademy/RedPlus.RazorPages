@@ -24,8 +24,8 @@ namespace RedPlus
             }
 
             // 미들웨어 추가 
-            //app.UseStaticFiles(); // 정적인 HTML, CSS, JavaScript, ... 실행
-            app.UseFileServer(); // "Microsoft Docs UseFileServer"
+            app.UseStaticFiles(); // 정적인 HTML, CSS, JavaScript, ... 실행
+            //app.UseFileServer(); // "Microsoft Docs UseFileServer"
 
             app.UseRouting();
 
