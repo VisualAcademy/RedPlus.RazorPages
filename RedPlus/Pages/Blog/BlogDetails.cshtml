@@ -1,4 +1,9 @@
-﻿@page
+﻿@page "{id}"
+
+@{ 
+    // id 이름으로 넘어 온 라우트 토큰 값 받기 
+    var id = int.Parse((string)RouteData.Values["id"]);
+}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +15,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Modern Business - Start Bootstrap Template</title>
+  <title>Blog Details - @id</title>
 
   <!-- Bootstrap core CSS -->
   <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -83,7 +88,7 @@
   <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">Post Title
+    <h1 class="mt-4 mb-3">Post Title - @id  
       <small>by
         <a href="#">Start Bootstrap</a>
       </small>
