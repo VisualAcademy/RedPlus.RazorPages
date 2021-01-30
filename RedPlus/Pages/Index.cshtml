@@ -1,5 +1,7 @@
 ﻿@page
 
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
 @{
     var siteTitle = "My Blog";
     string[] portfolios = { "1", "2", "3", "Four", "Five", "Six" };
@@ -37,13 +39,16 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/About">About</a>
+                        <a class="nav-link" asp-page="/About">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Services">Services</a>
+                        <a class="nav-link" asp-page="/Services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Contact">Contact</a>
+                        <a class="nav-link" asp-page="/Contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-page="/Blog/BlogList">Blog</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -55,15 +60,6 @@
                             <a class="dropdown-item" href="portfolio-3-col.html">3 Column Portfolio</a>
                             <a class="dropdown-item" href="portfolio-4-col.html">4 Column Portfolio</a>
                             <a class="dropdown-item" href="portfolio-item.html">Single Portfolio Item</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Blog
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                            <a class="dropdown-item" href="/Blog/BlogList">Blog Home</a>
-                            <a class="dropdown-item" href="/Blog/BlogDetails">Blog Post</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
