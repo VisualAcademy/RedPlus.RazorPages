@@ -1,6 +1,7 @@
 ﻿@page
 
 @using RedPlus.Models
+@using RedPlus.Services
 
 @*@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers*@
 
@@ -11,12 +12,14 @@
 
     //string[] portfolios = { "1", "2", "3", "Four", "Five", "Six" };
 
-    List<Portfolio> portfolios = new List<Portfolio>()
-    {
-        new Portfolio { Id = 1, Title = ".NET", Description = "ASP.NET Core" },
-        new Portfolio { Id = 2, Title = "Java", Description = "Spring Boot" },
-        new Portfolio { Id = 3, Title = "JavaScript", Description = "React" },
-    };
+    //List<Portfolio> portfolios = new List<Portfolio>()
+    //{
+    //    new Portfolio { Id = 1, Title = ".NET", Description = "ASP.NET Core" },
+    //    new Portfolio { Id = 2, Title = "Java", Description = "Spring Boot" },
+    //    new Portfolio { Id = 3, Title = "JavaScript", Description = "React" },
+    //};
+
+    var portfolios = (new PortfolioServiceJsonFile()).GetPortfolios();
 }
 
 <header>
@@ -110,7 +113,7 @@
         {
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                    <a href="#"><img class="card-img-top img-fluid" src="@portfolio.Image" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
                             <a href="#">@portfolio.Title</a>
