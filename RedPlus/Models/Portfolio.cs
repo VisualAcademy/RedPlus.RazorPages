@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace RedPlus.Models
 {
@@ -11,6 +12,8 @@ namespace RedPlus.Models
 
         public string Title { get; set; }
         public string Description { get; set; }
+
+        [JsonPropertyName("img")]
         public string Image { get; set; }
 
         public override string ToString()
