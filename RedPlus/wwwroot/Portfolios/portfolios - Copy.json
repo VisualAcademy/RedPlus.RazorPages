@@ -16,5 +16,11 @@
     "title": "JavaScript",
     "description": "React.js",
     "img": "/Portfolios/images/React.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Azure DevOps",
+    "description": "Azure and Azure DevOps",
+    "img": "/Portfolios/images/Azure.png"
   }
 ]
