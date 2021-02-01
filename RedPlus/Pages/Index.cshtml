@@ -5,6 +5,8 @@
 
 @*@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers*@
 
+@inject PortfolioServiceJsonFile PortfolioService
+
 @{
     Layout = "_Layout";
 
@@ -19,7 +21,8 @@
     //    new Portfolio { Id = 3, Title = "JavaScript", Description = "React" },
     //};
 
-    var portfolios = (new PortfolioServiceJsonFile()).GetPortfolios();
+    //var portfolios = (new PortfolioServiceJsonFile()).GetPortfolios();
+    var portfolios = PortfolioService.GetPortfolios();
 }
 
 <header>
@@ -114,7 +117,7 @@
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
                     @*<a href="#"><img class="card-img-top img-fluid" src="@portfolio.Image" alt=""></a>*@
-                    <div class="portfolio-item-image" 
+                    <div class="portfolio-item-image"
                          style="background-image: url('@portfolio.Image');"></div>
                     <div class="card-body">
                         <h4 class="card-title">
