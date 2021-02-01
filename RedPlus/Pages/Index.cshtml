@@ -113,12 +113,17 @@
         {
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top img-fluid" src="@portfolio.Image" alt=""></a>
+                    @*<a href="#"><img class="card-img-top img-fluid" src="@portfolio.Image" alt=""></a>*@
+                    <div class="portfolio-item-image" 
+                         style="background-image: url('@portfolio.Image');"></div>
                     <div class="card-body">
                         <h4 class="card-title">
                             <a href="#">@portfolio.Title</a>
                         </h4>
                         <p class="card-text">@portfolio.Description</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary">Read More...</button>
                     </div>
                 </div>
             </div>
