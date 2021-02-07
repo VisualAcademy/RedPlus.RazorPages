@@ -1,7 +1,9 @@
 ﻿@page
-@model RedPlus.Pages.Portfolios.IndexModel
+@model RedPlus.Pages.Portfolios.ListModel
+@inject PortfolioServiceJsonFile PortfolioService
 @{
     ViewData["Title"] = "Portfolio";
+    var portfolios = PortfolioService.GetPortfolios();
 }
 
 <!-- Page Content -->
@@ -20,7 +22,7 @@
     </ol>
 
     <div class="row">
-        @foreach (var portfolio in Model.Portfolios)
+        @foreach (var portfolio in portfolios)
         {
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
