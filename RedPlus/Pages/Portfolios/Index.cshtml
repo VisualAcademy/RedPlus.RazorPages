@@ -4,6 +4,8 @@
     ViewData["Title"] = "Portfolio";
 }
 
+@using RedPlus.Components
+
 <!-- Page Content -->
 <div class="container">
 
@@ -19,6 +21,7 @@
         <li class="breadcrumb-item active">Portfolio</li>
     </ol>
 
+    <h2>Razor Page 사용 출력</h2>
     <div class="row">
         @foreach (var portfolio in Model.Portfolios)
         {
@@ -40,6 +43,12 @@
         }
     </div>
     <!-- /.row -->
+
+    <hr />
+
+    <component type="typeof(PortfolioList)" render-mode="ServerPrerendered" />
+
+    <script src="_framework/blazor.server.js"></script>
 
 </div>
 <!-- /.container -->
