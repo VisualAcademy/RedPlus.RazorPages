@@ -2,13 +2,15 @@
 
 @using RedPlus.Models
 @using RedPlus.Services
+@using RedPlus.Components
 
 @*@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers*@
 
 @inject PortfolioServiceJsonFile PortfolioService
 
 @{
-    Layout = "_Layout";
+    //Layout = "_Layout";
+    Layout = "_LayoutPortfolio";
 
     ViewBag.Title = "Index";
 
@@ -110,6 +112,8 @@
     <!-- /.row -->
     <!-- Portfolio Section -->
     <h2>Portfolio Heading</h2>
+
+    <component type="typeof(PortfolioList)" render-mode="ServerPrerendered" />
 
     <div class="row">
         @foreach (var portfolio in portfolios)
