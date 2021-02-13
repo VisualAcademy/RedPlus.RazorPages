@@ -26,12 +26,11 @@ namespace RedPlus.Services
 
         public IEnumerable<Portfolio> GetPortfolios()
         {
-            using (var jsonFileReader = File.OpenText(JsonFileName))
-            {
-                var options = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true };
-                var portfolios = JsonSerializer.Deserialize<Portfolio[]>(jsonFileReader.ReadToEnd(), options);
-                return portfolios;
-            }
+            // Using 선언: https://docs.microsoft.com/ko-kr/dotnet/csharp/whats-new/csharp-8#using-declarations
+            using var jsonFileReader = File.OpenText(JsonFileName);
+            var options = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true };
+            var portfolios = JsonSerializer.Deserialize<Portfolio[]>(jsonFileReader.ReadToEnd(), options);
+            return portfolios;
         }
 
         public void AddRating(int portfolioId, int rating)
