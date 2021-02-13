@@ -66,11 +66,13 @@
                         var currentStar = i;
                         if (i <= currentRating)
                         {
-                            <span @onclick="() => HandleClick(currentStar)">★</span>
+                            <span style="cursor: pointer;"
+                                @onclick="() => HandleClick(currentStar)">★</span>
                         }
                         else
                         {
-                            <span @onclick="() => HandleClick(currentStar)">☆</span>
+                            <span style="cursor: pointer;"
+                                @onclick="() => HandleClick(currentStar)">☆</span>
                         }
                     }
                 </div>
