@@ -20,14 +20,12 @@ namespace RedPlus.Services
         {
             get
             {
-                //return _webHostEnvironment.WebRootPath + "\\Portfolios" + "\\portfolios.json";
                 return Path.Combine(_webHostEnvironment.WebRootPath, "Portfolios", "portfolios.json");
             }
         }
 
         public IEnumerable<Portfolio> GetPortfolios()
         {
-            //var jsonFileName = @"C:\Razor\RedPlus.RazorPages\RedPlus\wwwroot\Portfolios\portfolios.json";
             using (var jsonFileReader = File.OpenText(JsonFileName))
             {
                 var options = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true };
