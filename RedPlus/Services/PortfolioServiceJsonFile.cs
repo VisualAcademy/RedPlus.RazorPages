@@ -16,6 +16,9 @@ namespace RedPlus.Services
             this._webHostEnvironment = webHostEnvironment;
         }
 
+        /// <summary>
+        /// wwwroot/Portfolios/portfolios.json 파일의 물리적인 경로 읽어오기 
+        /// </summary>
         private string JsonFileName 
         {
             get
