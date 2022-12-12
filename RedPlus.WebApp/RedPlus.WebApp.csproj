@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <UserSecretsId>aspnet-RedPlus.WebApp-5A5A0FFF-6093-4919-80ED-3A16A08C74E1</UserSecretsId>
   </PropertyGroup>
 
