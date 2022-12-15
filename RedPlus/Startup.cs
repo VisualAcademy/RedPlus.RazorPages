@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RedPlus.Services;
@@ -14,7 +13,7 @@ namespace RedPlus
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages(); // 
-            services.AddServerSideBlazor(); 
+            services.AddServerSideBlazor();
             services.AddTransient<PortfolioServiceJsonFile>(); // DI Container
         }
 
@@ -28,14 +27,14 @@ namespace RedPlus
 
             // 미들웨어 추가 
             app.UseStaticFiles(); // 정적인 HTML, CSS, JavaScript, ... 실행
-            //app.UseFileServer(); // "Microsoft Docs UseFileServer"
+            //app.UseFileServer(); // "Microsoft Learn UseFileServer"
 
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages(); //
-                endpoints.MapBlazorHub(); 
+                endpoints.MapBlazorHub();
                 //endpoints.MapGet("/", async context =>
                 //{
                 //    await context.Response.WriteAsync("Hello World!!!");
